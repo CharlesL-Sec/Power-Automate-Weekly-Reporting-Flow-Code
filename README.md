@@ -16,7 +16,7 @@ The PowerAutoMate script will:
 
 This process  requires the following setup
 -	PowerPoint Weekly Reporting Template
--	Once the required PowerPoint template has been created, the file should be stored in the following template SharePoint folder -  https://easyjet.sharepoint.com/:p:/r/sites/SecurityOperations/Shared%20Documents/SecOps%20Team%20Reporting/1.%20Report%20Templates/1.%20Technical%20Security%20Team/2.%20Weekly%20Technical%20Security%20Team%20Report/ 
+-	Once the required PowerPoint template has been created, the file should be stored in the following SharePoint folder -  https://easyjet.sharepoint.com/:p:/r/sites/SecurityOperations/Shared%20Documents/SecOps%20Team%20Reporting/1.%20Report%20Templates/1.%20Technical%20Security%20Team/2.%20Weekly%20Technical%20Security%20Team%20Report/ 
 
 This boilerplate should be stored with a logically serialised and versioned filename.
 A working copy should be made named TEMPLATE.pptx 
