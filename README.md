@@ -33,6 +33,7 @@ The PowerAutoMate script will:
 
 
 ### Formulas
-- Get the NExt Fridays date - `@addDays(utcNow(),sub(5,dayOfWeek(utcNow())))`
+- Get the next Fridays date  | fridayInWeek `@addDays(utcNow(),sub(5,dayOfWeek(utcNow())))`
+- Extract the year | YearOnly `concat(formatDateTime(outputs('fridayInWeek'),'yyyy'))`
 
 
