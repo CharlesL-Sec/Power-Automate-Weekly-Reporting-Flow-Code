@@ -51,7 +51,7 @@ The PowerAutoMate script will:
 |--------|------------|------------|
 |Create sharepoint file or folder | createFolder | - |
 |Site Address*| SharePoint site address |https://easyjet.sharepoint.com/sites/SecurityOperations|
-|Folderr path*| Path  |/SecOps Team Reporting/2. Weekly/1. Technical Security Weekly Report/@{outputs('YearOnly')}/@{outputs('Short_Month_And_Year')}/|
+|Folderr path*| Path  |/SecOps Team Reporting/2. Weekly/1. Technical Security Weekly Report/@{outputs('YearOnly')}/@{outputs('shortMonthAndYear')}/|
 
 
 
