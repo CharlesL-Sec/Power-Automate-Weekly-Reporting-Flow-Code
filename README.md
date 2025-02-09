@@ -34,7 +34,8 @@ The PowerAutoMate script will:
 
 ### Formulas
 
-|----|----|----|
+
+|----|----|----|  
 |__Name__|__Variable__|__Formula__|
 
 
