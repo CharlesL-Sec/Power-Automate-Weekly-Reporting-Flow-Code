@@ -45,6 +45,25 @@ The PowerAutoMate script will:
 |Day Month and Year (e.g. 07-02-2025 | dayMonthYear | `concat(formatDateTime(outputs('fridayInWeek'),'dd-MM-yyyy'))`|
 |Report Name - Part of name | reportName |string('Technical Security Team - Weekly Report')|
 
+
+
+|__Name__|__Variable__|__Formula__|
+|--------|------------|------------|
+|Site Address | SharePoint Path | [Parameters:-](https://easyjet.sharepoint.com/sites/SecurityOperations)|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 | First Header  | Second Header |
 | ------------- | ------------- |
 | Content Cell  | Content Cell  |
