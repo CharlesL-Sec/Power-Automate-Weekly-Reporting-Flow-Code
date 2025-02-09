@@ -40,6 +40,7 @@ The PowerAutoMate script will:
 |--------|------------|------------|
 |Get the next Fridays date  | fridayInWeek |`@addDays(utcNow(),sub(5,dayOfWeek(utcNow())))`|
 |Extract the year | YearOnly | `concat(formatDateTime(outputs('fridayInWeek'),'yyyy'))`|
+|Month and Year (July 25) |monthAndYear | `concat(formatDateTime(outputs('fridayInWeek'),'Y'))`|
 
 
 | First Header  | Second Header |
