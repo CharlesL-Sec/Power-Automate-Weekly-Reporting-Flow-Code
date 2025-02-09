@@ -40,7 +40,7 @@ graph TD;
   getfridaydate["`@addDays(utcNow(),sub(5,dayOfWeek(utcNow())))`"]-->
   setvariables[YearOnly]-->
   yearOnly["concat(formatDateTime(outputs('fridayInWeek'),'yyyy'))"]-->
-   datyandMonth["`concat(formatDateTime(outputs('fridayInWeek'),'Y'))`"]-->
+   datyandMonth["concat(formatDateTime(outputs('fridayInWeek'),'Y'))"]-->
 
 
 
