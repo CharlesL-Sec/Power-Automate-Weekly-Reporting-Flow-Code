@@ -35,21 +35,6 @@ The PowerAutoMate script will:
 ### Flow
 
 ```mermaid
-<style>
-  .mermaidTooltip {
-      position: absolute;
-      text-align: center;
-      max-width: 200px;
-      padding: 2px;
-      font-family: 'trebuchet ms', verdana, arial;
-      font-size: 12px;
-      background: #ffffde;
-      border: 1px solid #aaaa33;
-      border-radius: 2px;
-      pointer-events: none;
-      z-index: 100;
-    }
-</style>
 graph TD;
   trigger[Reoccurence settings]-->
   getfridaydate["`@addDays(utcNow(),sub(5,dayOfWeek(utcNow())))`"]-->
