@@ -32,12 +32,7 @@ The PowerAutoMate script will:
 
 
 
-### Flow
-
-```mermaid
-graph TD;
-  trigger[Reoccurence settings]-->getfridaydate["`@addDays(utcNow(),sub(5,dayOfWeek(utcNow())))`"]-->setvariables[YearOnly]-->yearOnly["concat(formatDateTime(outputs('fridayInWeek'),'yyyy'))"]-->datandMonth["concat(formatDateTime(outputs('fridayInWeek'),'Y'))"]
+### Formulas
+- Get the NExt Fridays date - `@addDays(utcNow(),sub(5,dayOfWeek(utcNow())))`
 
 
-
-```
