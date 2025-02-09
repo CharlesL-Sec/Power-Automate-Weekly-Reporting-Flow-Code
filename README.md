@@ -49,7 +49,8 @@ The PowerAutoMate script will:
 
 |__Name__|__Variable__|__Formula__|
 |--------|------------|------------|
-|Site Address | SharePoint Path | [Parameters:-](https://easyjet.sharepoint.com/sites/SecurityOperations)|
+|Site Address | SharePoint Path | [Parameters:-]|
+|createFolder| SharePoint site address |(https://easyjet.sharepoint.com/sites/SecurityOperations)|
 
 
 
