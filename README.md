@@ -29,3 +29,18 @@ The PowerAutoMate script will:
 -Create a sharelink for the new weekly report copy.
 - Post a message to the reporting Teams channel containing the new sharelink
 	
+
+
+
+### Flow
+
+```mermaid
+
+graph TD;
+  trigger[Reoccurence settins] -->getfridaydate[`@addDays(utcNow(),sub(5,dayOfWeek(utcNow())))`]
+  setvariables[YearOnly] -->yearOnly[`concat(formatDateTime(outputs('fridayInWeek'),'yyyy'))`]
+
+
+
+
+```
