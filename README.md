@@ -38,9 +38,9 @@ The PowerAutoMate script will:
 
 |__Name__|__Variable__|__Formula__|
 |--------|------------|------------|
-|Get the next Fridays date  | fridayInWeek |`@addDays(utcNow(),sub(5,dayOfWeek(utcNow())))`|
-|Extract the year | YearOnly | `concat(formatDateTime(outputs('fridayInWeek'),'yyyy'))`|
-|Month and Year (July 25) |monthAndYear | `concat(formatDateTime(outputs('fridayInWeek'),'Y'))`|
+|Get the next Fridays date  | nextFriday |`@addDays(utcNow(),sub(5,dayOfWeek(utcNow())))`|
+|Extract the year | YearOnly | `concat(formatDateTime(outputs('nextFridayk'),'yyyy'))`|
+|Month and Year (July 25) |monthAndYear | `concat(formatDateTime(outputs('nextFriday'),'Y'))`|
 
 
 | First Header  | Second Header |
