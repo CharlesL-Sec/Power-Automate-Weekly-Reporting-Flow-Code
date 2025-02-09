@@ -38,8 +38,9 @@ The PowerAutoMate script will:
 graph TD;
   trigger[Reoccurence settings]-->
   getfridaydate["`@addDays(utcNow(),sub(5,dayOfWeek(utcNow())))`"]-->
-  setvariables[YearOnly<a href='http://google.com'>link</a>]-->
-  yearOnly["concat(formatDateTime(outputs('fridayInWeek'),'yyyy'))"]
+  setvariables[YearOnly]-->
+  yearOnly["concat(formatDateTime(outputs('fridayInWeek'),'yyyy'))"]-->
+   datyandMonth[concat(formatDateTime(outputs('fridayInWeek'),'Y'))]
 
 
 
