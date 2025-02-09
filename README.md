@@ -39,4 +39,10 @@ The PowerAutoMate script will:
 |__Name__|__Variable__|__Formula__|
 
 
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
+
 
