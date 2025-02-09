@@ -41,7 +41,9 @@ The PowerAutoMate script will:
 |Get the next Fridays date  | nextFriday |`@addDays(utcNow(),sub(5,dayOfWeek(utcNow())))`|
 |Extract the year | YearOnly | `concat(formatDateTime(outputs('nextFriday'),'yyyy'))`|
 |Month and Year (e.g. July 25, Feburary 2025) |monthAndYear | `concat(formatDateTime(outputs('nextFriday'),'Y'))`|
-|Abreviation month and Yert (e.g. Jul 2025, Feb 2025) | shortMonthAndYear | `concat(formatDateTime(outputs('nextFriday'),'Y'))`|  
+|Abreviation month and Year (e.g. Jul 2025, Feb 2025) | shortMonthAndYear | `concat(formatDateTime(outputs('nextFriday'),'Y'))`|  
+|Day Month and Year (e.g. 07-02-2025 | dayMonthYear | `concat(formatDateTime(outputs('fridayInWeek'),'dd-MM-yyyy'))`|
+|Report Name - Part of name | reportName |string('Technical Security Team - Weekly Report')|
 
 | First Header  | Second Header |
 | ------------- | ------------- |
