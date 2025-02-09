@@ -37,7 +37,7 @@ The PowerAutoMate script will:
 ```mermaid
 
 graph TD;
-  trigger[Reoccurence settins]
+  trigger[Reoccurence settings]-->
   getfridaydate["@addDays(utcNow(),sub(5,dayOfWeek(utcNow())))"]
   setvariables[YearOnly]
   yearOnly["concat(formatDateTime(outputs('fridayInWeek'),'yyyy'))"]
