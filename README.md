@@ -52,7 +52,7 @@ The flow concludes successfully after sending the final reminder.
 |Day Month and Year (e.g. 07-02-2025 | dayMonthYear | `concat(formatDateTime(outputs('fridayInWeek'),'dd-MM-yyyy'))`|
 |Report Name - Part of name | reportName |`string('Technical Security Team - Weekly Report')`|
 |Add timestamp to protect overwrite (now time) | reportName |`"@formatDateTime(utcNow(),'dd-MM-yyyy')")`|
-|Now date | fomattedNowdate  |`formatDateTime(utcNow(), 'HH:mm')`|
+|Now date | fomattedNowdate  |`formatDateTime(utcNow(), 'dd-MM-yyyy')`|
 
 
 
