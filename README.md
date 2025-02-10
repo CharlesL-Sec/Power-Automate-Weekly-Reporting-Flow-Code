@@ -7,29 +7,36 @@ PowerAutomate flow for Team Weekly Report automation
 
 ### Process Setup
 
-The PowerAutoMate script will: 
-- Make a copy of the working template in the 1. Technical Security Weekly Report { YYYY} {MMM YY}/ directory.
-- Create this copy using the serial date of the next Friday e.g. 20250132 – Technical Security Team Weekly.
--Create a sharelink for the new weekly report copy.
-- Post a message to the reporting Teams channel containing the new sharelink
+Trigger: The flow is scheduled to run every Monday at 9:00 AM GMT.
 
+Calculate Dates:
 
-This process  requires the following setup
--	PowerPoint Weekly Reporting Template
--	Once the required PowerPoint template has been created, the file should be stored in the following SharePoint folder -  https://easyjet.sharepoint.com/:p:/r/sites/SecurityOperations/Shared%20Documents/SecOps%20Team%20Reporting/1.%20Report%20Templates/1.%20Technical%20Security%20Team/2.%20Weekly%20Technical%20Security%20Team%20Report/ 
+It calculates the date for the next Friday.
+It extracts the year, month, and day from that date to format it for the report name and folder structure.
+Create Folder:
 
-This boilerplate should be stored with a logically serialised and versioned filename.
-A working copy should be made named TEMPLATE.pptx 
-___This will reduce the risk that the script can wipe out the original template due to an error__
+A new folder is created in SharePoint under a specified path for the weekly report, using the formatted year and month.
+Get Template Content:
 
-### PowerAutoMate Flow Process.
-The PowerAutoMate script will: 
-- Make a copy of the working template in the 1. Technical Security Weekly Report { YYYY} {MMM YY}/ directory.
-- Create this copy using the serial date of the following Friday, e.g. 20250132 – Technical Security Team Weekly.
--Create a sharelink for the new weekly report copy.
-- Post a message to the reporting Teams channel containing the new sharelink
-	
+The flow retrieves a PowerPoint template from SharePoint that will be used for the report.
+Create Report File:
 
+A new PowerPoint file is created in the newly created folder, using the content from the template and naming it according to the calculated date and report name.
+Create Sharing Link:
+
+A sharing link for the newly created report file is generated, allowing others to access it.
+Notify Team Members:
+
+The flow prepares a list of team members' email addresses and generates mention tokens for each member.
+It sends a message to a specified Teams channel, notifying the team about the published report and including the sharing link.
+Reminders:
+
+The flow sets up reminders for the team:
+A reminder is sent on Wednesday about the upcoming report.
+A final reminder is sent on Friday before the meeting, encouraging team members to update their sections of the report.
+Termination:
+
+The flow concludes successfully after sending the final reminder.
 
 
 ### Formulas
