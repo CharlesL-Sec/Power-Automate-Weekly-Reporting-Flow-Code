@@ -50,7 +50,7 @@ The flow concludes successfully after sending the final reminder.
 |Month and Year (e.g. July 25, Feburary 2025) |monthAndYear | `concat(formatDateTime(outputs('nextFriday'),'Y'))`|
 |Abreviation month and Year (e.g. Jul 2025, Feb 2025) | shortMonthAndYear | `concat(formatDateTime(outputs('nextFriday'),'Y'))`|  
 |Day Month and Year (e.g. 07-02-2025 | dayMonthYear | `concat(formatDateTime(outputs('fridayInWeek'),'dd-MM-yyyy'))`|
-|Report Name - Part of name | reportName |`st0ring('Technical Security Team - Weekly Report')`|
+|Report Name - Part of name | reportName |`string('Technical Security Team - Weekly Report')`|
 |Add timestamp to protect overwrite (now time | reportName |`formatDateTime(utcNow(), 'HH:mm')`|
 
 
