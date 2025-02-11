@@ -63,7 +63,7 @@ The flow concludes successfully after sending the final reminder.
 |Folder path*| Path  |/SecOps Team Reporting/2. Weekly/1. Technical Security Weekly Report/{outputs('YearOnly')}/{outputs('shortMonthAndYear')}/|
 |Get Template Content*|  Site Address* |https://easyjet.sharepoint.com/sites/SecurityOperations|
 |File Identifier*|  Template location |/Shared Documents/SecOps Team Reporting/1. Report Templates/1. Technical Security Team/2. Weekly Technical Security Team Report/TEMPLATE.pptx|
-|Wait Until | Random delay after start time|`{
+|Wait Until | Random delay after start time|```{
   "type": "Recurrence",
   "recurrence": {
     "interval": 1,
@@ -71,7 +71,7 @@ The flow concludes successfully after sending the final reminder.
     "timeZone": "GMT Standard Time",
     "startTime": "2025-02-11T22:15:00Z"
   }
-}` |
+}``` |
 
 
 
