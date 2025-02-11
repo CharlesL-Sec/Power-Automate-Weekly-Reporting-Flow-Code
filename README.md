@@ -65,8 +65,9 @@ The flow concludes successfully after sending the final reminder.
 |File Identifier*|  Template location |/Shared Documents/SecOps Team Reporting/1. Report Templates/1. Technical Security Team/2. Weekly Technical Security Team Report/TEMPLATE.pptx|
 
 
-|--------|----------|--------|
-Wait Until | Random delay after start time|```{
+Setting for __Wait Until__
+```
+{
   "type": "Recurrence",
   "recurrence": {
     "interval": 1,
@@ -74,8 +75,8 @@ Wait Until | Random delay after start time|```{
     "timeZone": "GMT Standard Time",
     "startTime": "2025-02-11T22:15:00Z"
   }
-}``` |
-
+}
+```
 
 
 
