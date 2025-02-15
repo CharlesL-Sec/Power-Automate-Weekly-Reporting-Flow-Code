@@ -45,6 +45,7 @@ The flow concludes successfully after sending the final reminder.
 
 |__Name__|__Variable__|__Formula__|
 |--------|------------|------------|
+|Get Next Monday| NextMonday|addDays(utcNow(),if(equals(dayOfWeek(utcNow()),0),1,sub(8,dayOfWeek(utcNow()))),'yyyy-MM-dd')|
 |Get the next Fridays date  | nextFriday |`@addDays(utcNow(),sub(5,dayOfWeek(utcNow())))`|
 |Extract the year | YearOnly | `formatDateTime(outputs('nextFriday'),'yyyy')`|
 |Month and Year (e.g. July 25, Feburary 2025) |monthAndYear | `concat(formatDateTime(outputs('getFridayDate'), 'MMM yyyy'))`|
