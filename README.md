@@ -47,14 +47,14 @@ The flow concludes successfully after sending the final reminder.
 |--------|------------|------------|----------|
 |Timestamp Format| timestamp |  ```yyyy-MM-ddTHH:mm:ssZ``` | 2025-02-16T16:52:00Z|
 |Get Next Monday| NextMonday|addDays(utcNow(),if(equals(dayOfWeek(utcNow()),0),1,sub(8,dayOfWeek(utcNow()))),'yyyy-MM-dd')||
-|Get the next Fridays date  | nextFriday |`@addDays(utcNow(),sub(5,dayOfWeek(utcNow())))`||
-|Extract the year | YearOnly | `formatDateTime(outputs('nextFriday'),'yyyy')`||
-|Month and Year (e.g. July 25, Feburary 2025) |monthAndYear | `concat(formatDateTime(outputs('getFridayDate'), 'MMM yyyy'))`||
-|abbreviation month and Year (e.g. Jul 2025, Feb 2025) | shortMonthAndYear | `@concat(formatDateTime(outputs('getFridayDate'), 'MMM yyyy`|  |
-|Day Month and Year (e.g. 07-02-2025 | dayMonthYear | `concat(formatDateTime(outputs('fridayInWeek'),'dd-MM-yyyy'))`||
-|Report Name - Part of name | reportName |`string('Your Team Name - Weekly Report')`||
-|Add timestamp to protect overwrite (now time) | reportName |`@formatDateTime(utcNow(),'HH:MM')`|!
-|Now date | fomattedNowdate  |`formatDateTime(utcNow(), 'dd-MM-yyyy')`|!
+|Get the next e.g Fridays date  | nextFriday |`addDays(utcNow(),sub(5,dayOfWeek(utcNow())))`| 2025-02-__21__T17:05:55.3796961Z|
+|Extract the year | YearOnly | formatDateTime(uthNow(),'yyyy')`| 2025 |
+|Day Month and Year  |dayMonthAndYear | formatDateTime(utcNow(), 'dd MMM yyyy')| 16 Feb 2025|
+|abbreviated month and Year  | shortMonthAndYear | `@concat(formatDateTime(outputs('getFridayDate'), 'MMM yyyy`| Feb 25  |
+|Add timestamp to protect overwrite (now time) | reportName |`formatDateTime(utcNow(),'HH:MM')`| 16:02 |
+|Short Date Format | shortDate  |`formatDateTime(utcNow(), 'dd-MM-yyyy')`| 16-02-2025 |
+|Report Name - Part of name | reportName |`string('Your Team Name - Weekly Report')`| Your Team Name - Weekly Report|
+
 
 
 
