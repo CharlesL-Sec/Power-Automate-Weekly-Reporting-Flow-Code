@@ -46,8 +46,8 @@ The flow concludes successfully after sending the final reminder.
 |__Name__|__Variable__|__Formula__|__Example |
 |--------|------------|------------|----------|
 |Timestamp Format| timestamp |  ```yyyy-MM-ddTHH:mm:ssZ``` | 2025-02-16T16:52:00Z|
-|Get Next Monday| NextMonday|addDays(utcNow(),if(equals(dayOfWeek(utcNow()),0),1,sub(8,dayOfWeek(utcNow()))),'yyyy-MM-dd')||
-|Get the next e.g Fridays date  | nextFriday |`addDays(utcNow(),sub(5,dayOfWeek(utcNow())))`| 2025-02-__21__T17:05:55.3796961Z|
+|Get Next Monday| NextMonday|addDays(utcNow(),if(equals(dayOfWeek(utcNow()),0),1,sub(1,dayOfWeek(utcNow()))),'yyyy-MM-dd')||
+|Get the next e.g Fridays date  | nextFriday |`addDays(utcNow(),sub(5,dayOfWeek(utcNow())))`| 2025-02-`**21**`T17:05:55.3796961Z|
 |Extract the year | YearOnly | formatDateTime(uthNow(),'yyyy')`| 2025 |
 |Day Month and Year  |dayMonthAndYear | formatDateTime(utcNow(), 'dd MMM yyyy')| 16 Feb 2025|
 |abbreviated month and Year  | shortMonthAndYear | `@concat(formatDateTime(outputs('getFridayDate'), 'MMM yyyy`| Feb 25  |
