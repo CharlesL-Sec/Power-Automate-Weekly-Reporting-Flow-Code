@@ -46,6 +46,7 @@ The flow concludes successfully after sending the final reminder.
 |__Name__|__Variable__|__Formula__|__Example |
 |--------|------------|------------|----------|
 |Timestamp Format| timestamp |  ```yyyy-MM-ddTHH:mm:ssZ``` | 2025-02-16T16:52:00Z|
+|Fairly normal date output  |fairlyNormalDate|formatDateTime(utcNow(),'d MMM yyyy, HH:mm')|16 Feb 2025, 17:11|
 |Get Next Monday| NextMonday|addDays(utcNow(),if(equals(dayOfWeek(utcNow()),0),1,sub(1,dayOfWeek(utcNow()))),'yyyy-MM-dd')||
 |Get the next e.g Fridays date  | nextFriday |`addDays(utcNow(),sub(5,dayOfWeek(utcNow())))`| 2025-02-`**21**`T17:05:55.3796961Z|
 |Extract the year | YearOnly | formatDateTime(uthNow(),'yyyy')`| 2025 |
