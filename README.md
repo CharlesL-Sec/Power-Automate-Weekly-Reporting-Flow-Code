@@ -49,7 +49,7 @@ The flow concludes successfully after sending the final reminder.
 |Fairly normal date output  |fairlyNormalDate|formatDateTime(utcNow(),'d MMM yyyy, HH:mm')|16 Feb 2025, 17:11|
 |Get Next Monday| NextMonday|addDays(utcNow(),if(equals(dayOfWeek(utcNow()),0),1,sub(1,dayOfWeek(utcNow()))),'yyyy-MM-dd')||
 |Get the next e.g Fridays date  | nextFriday |`addDays(utcNow(),sub(5,dayOfWeek(utcNow())))`| 2025-02-`**21**`T17:05:55.3796961Z|
-|Extract the year | YearOnly | formatDateTime(uthNow(),'yyyy')`| 2025 |
+|Extract the year | YearOnly | formatDateTime(utcNow(),'yyyy')`| 2025 |
 |Day Month and Year  |dayMonthAndYear | formatDateTime(utcNow(), 'dd MMM yyyy')| 16 Feb 2025|
 |abbreviated month and Year  | shortMonthAndYear | `@concat(formatDateTime(outputs('getFridayDate'), 'MMM yyyy`| Feb 25  |
 |Add timestamp to protect overwrite (now time) | reportName |`formatDateTime(utcNow(),'HH:MM')`| 16:02 |
