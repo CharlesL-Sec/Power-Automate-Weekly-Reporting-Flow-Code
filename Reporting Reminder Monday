@@ -29,7 +29,7 @@
           "items": [
             {
               "type": "TextBlock",
-              "text": "Friday Report Reminder",
+              "text": "Monday Report Reminder",
               "weight": "Bolder",
               "size": "Medium"
             },
