@@ -1,0 +1,96 @@
+```json
+
+{
+  "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.2",
+  "body": [
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "auto",
+          "items": [
+            {
+              "type": "Image",
+              "url": "@{variables('EncodeImage')}",
+              "width": "50px",
+              "height": "50px",
+              "spacing": "large",
+              "horizontalAlignment": "left",
+              "altText": "Digital Safey Team"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "Friday Report Reminder",
+              "weight": "Bolder",
+              "size": "Medium"
+            },
+            {
+              "type": "TextBlock",
+              "text": "Technical Security Team",
+              "isSubtle": true,
+              "wrap": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "TextBlock",
+      "text": "Good Morning Team,",
+      "separator": true
+    },
+    {
+      "type": "TextBlock",
+      "text": "To ",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "text": "",
+      "wrap": true,
+      "color": "Accent"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Please find below the link to this week's PowerPoint presentation for Fridays meeting @{formatDateTime(variables('nextFridayVar'), 'dd  MMMM yyyy')}. ",
+      "fontType": "Default",
+      "size": "Medium",
+      "weight": "Lighter",
+      "wrap": true,
+      "height": "stretch",
+      "horizontalAlignment": "Left",
+      "spacing": "Large"
+    },
+    {
+      "type": "ActionSet",
+      "actions": [
+        {
+          "type": "Action.OpenUrl",
+          "title": "Click here to open report",
+          "url": "@{outputs('Create_sharing_link_for_new_file')?['body/link/webUrl']}"
+        }
+      ]
+    },
+    {
+      "type": "TextBlock",
+      "text": "Flow version  @{body('Parse_JSON_Workflow_name')?['tags']?['flowDisplayName']}  ",
+      "wrap": true,
+      "height": "stretch",
+      "size": "small",
+      "horizontalAlignment": "Left",
+      "spacing": "Large",
+      "weight": "Lighter",
+      "separator": true
+    }
+  ]
+}
+````
