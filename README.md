@@ -55,7 +55,7 @@ The flow concludes successfully after sending the final reminder.
 | Add timestamp to protect overwrite (now time) | reportName |`formatDateTime(utcNow(),'HH:MM')`| 16:02 |
 | Short Date Format | shortDate  |`formatDateTime(utcNow(), 'dd-MM-yyyy')`| 16-02-2025 |
 | Report Name - Part of name | reportName |`string('Your Team Name - Weekly Report')`| Your Team Name - Weekly Report |
-| Last Day of the Month | `addDays(startOfMonth(addDays(startOfMonth( utcNow() ),31)),-1)`| 31-Dec-2025 |
+| Last Day of the Month | lastDayOfMonthVar | `addDays(startOfMonth(addDays(startOfMonth( utcNow() ),31)),-1)`| 31-Dec-2025 |
 
 
 
