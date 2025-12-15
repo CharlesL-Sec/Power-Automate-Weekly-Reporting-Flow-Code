@@ -45,16 +45,18 @@ The flow concludes successfully after sending the final reminder.
 
 |__Name__|__Variable__|__Formula__|__Example |
 |--------|------------|------------|----------|
-|Timestamp Format| timestamp |  ```yyyy-MM-ddTHH:mm:ssZ``` | 2025-02-16T16:52:00Z|
-|Fairly normal date output  |fairlyNormalDate|formatDateTime(utcNow(),'dd-MMM-yyyy, HH:mm')|16 Feb 2025, 17:11|
-|Get Next Monday| NextMonday|addDays(utcNow(),if(equals(dayOfWeek(utcNow()),0),1,sub(1,dayOfWeek(utcNow()))),'yyyy-MM-dd')||
-|Get the next e.g Fridays date  | nextFriday |`addDays(utcNow(),sub(5,dayOfWeek(utcNow())))`| 2025-02-`**21**`T17:05:55.3796961Z|
-|Extract the year | YearOnly | formatDateTime(utcNow(),'yyyy')`| 2025 |
-|Day Month and Year  |dayMonthAndYear | formatDateTime(utcNow(), 'dd MMM yyyy')| 16 Feb 2025|
-|abbreviated month and Year  | shortMonthAndYear | `@concat(formatDateTime(outputs('getFridayDate'), 'MMM yyyy`| Feb 25  |
-|Add timestamp to protect overwrite (now time) | reportName |`formatDateTime(utcNow(),'HH:MM')`| 16:02 |
-|Short Date Format | shortDate  |`formatDateTime(utcNow(), 'dd-MM-yyyy')`| 16-02-2025 |
-|Report Name - Part of name | reportName |`string('Your Team Name - Weekly Report')`| Your Team Name - Weekly Report|
+| Timestamp Format| timestamp |  ```yyyy-MM-ddTHH:mm:ssZ``` | 2025-02-16T16:52:00Z|
+| Fairly normal date output  |fairlyNormalDate|formatDateTime(utcNow(),'dd-MMM-yyyy, HH:mm')|16 Feb 2025, 17:11|
+| Get Next Monday| NextMonday|addDays(utcNow(),if(equals(dayOfWeek(utcNow()),0),1,sub(1,dayOfWeek(utcNow()))),'yyyy-MM-dd')||
+| Get the next e.g Fridays date  | nextFriday |`addDays(utcNow(),sub(5,dayOfWeek(utcNow())))`| 2025-02-`**21**`T17:05:55.3796961Z|
+| Extract the year | YearOnly | formatDateTime(utcNow(),'yyyy')`| 2025 |
+| Day Month and Year  |dayMonthAndYear | formatDateTime(utcNow(), 'dd MMM yyyy')| 16 Feb 2025|
+| abbreviated month and Year  | shortMonthAndYear | `@concat(formatDateTime(outputs('getFridayDate'), 'MMM yyyy`| Feb 25  |
+| Add timestamp to protect overwrite (now time) | reportName |`formatDateTime(utcNow(),'HH:MM')`| 16:02 |
+| Short Date Format | shortDate  |`formatDateTime(utcNow(), 'dd-MM-yyyy')`| 16-02-2025 |
+| Report Name - Part of name | reportName |`string('Your Team Name - Weekly Report')`| Your Team Name - Weekly Report|
+| LAst Day of the Month | addDays(startOfMonth(addDays(startOfMonth( utcNow() ),31)),-1)| 31-Dec-2025|
+
 
 
 
